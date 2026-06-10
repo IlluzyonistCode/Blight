@@ -7,7 +7,7 @@ class SYSINFO:
         self.cpu_info = self.get_cpu_info()
         self.mem_usage = self.get_mem_usage()
         self.disk_info = self.get_disk_info()
-        self.net_info  = self.get_net_info()
+        self.net_info = self.get_net_info()
 
     def get_size(self, bolter, suffix='B'):
         factor = 1024
@@ -20,7 +20,7 @@ class SYSINFO:
 
     def get_sys_info(self):
         headers = ('Platform Tag', 'Information')
-        values  = []
+        values = []
 
         uname = platform.uname()
 
@@ -37,7 +37,7 @@ class SYSINFO:
 
     def get_boot_time(self):
         headers = ('Boot Tags', 'Information')
-        values  = []
+        values = []
 
         boot_time_timestamp = psutil.boot_time()
         bt = datetime.fromtimestamp(boot_time_timestamp)
@@ -50,7 +50,7 @@ class SYSINFO:
 
     def get_cpu_info(self):
         headers = ('CPU Tag', 'Value')
-        values  = []
+        values = []
 
         cpufreq = psutil.cpu_freq()
 
@@ -67,7 +67,7 @@ class SYSINFO:
 
     def get_mem_usage(self):
         headers = ('Memory Tag', 'Value')
-        values  = []
+        values = []
 
         svmem = psutil.virtual_memory()
         swap = psutil.swap_memory()
